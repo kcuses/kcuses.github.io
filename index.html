@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaustubh Chakradeo - Academic Webpage</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS - DIRECT PATH -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar / Header Area -->
+        <aside class="sidebar">
+            <div class="profile-section">
+                <div class="profile-image-container">
+                    <img src="./images/profile.png" alt="Kaustubh Chakradeo">
+                </div>
+                <h1 class="name">Kaustubh Chakradeo</h1>
+                <p class="tagline">PhD Student | AI | Healthcare</p>
+                <div class="social-links">
+                    <a href="https://scholar.google.co.in/citations?user=w7q2xosAAAAJ&hl=da&oi=ao" target="_blank"
+                        title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                    <a href="https://www.linkedin.com/in/kaustubhchakradeo/" target="_blank" title="LinkedIn"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/kaustubhchakradeo" target="_blank" title="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="mailto:kcuses12@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li class="nav-item active" data-tab="about">About</li>
+                    <li class="nav-item" data-tab="experience">Experience</li>
+                    <li class="nav-item" data-tab="education">Education</li>
+                    <li class="nav-item" data-tab="publications">Publications</li>
+                    <li class="nav-item" data-tab="grants">Grants & Awards</li>
+                    <li class="nav-item" data-tab="talks">Invited Talks</li>
+                    <li class="nav-item" data-tab="teaching">Teaching</li>
+                    <li class="nav-item" data-tab="skills">Skills</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+            <div id="tab-content" class="fade-in">
+                <!-- Content injected via JS -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts: Loaded purely synchronously to avoid CORS on file protocol -->
+    <script src="./js/data.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

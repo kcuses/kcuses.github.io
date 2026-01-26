@@ -1,0 +1,320 @@
+:root {
+    /* Color Palette */
+    --primary-color: #2c3e50;
+    --accent-color: #3498db;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --bg-body: #f8f9fa;
+    --bg-white: #ffffff;
+    --border-color: #e1e4e8;
+    --sidebar-width: 280px;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+
+    /* Transitions */
+    --transition-speed: 0.3s;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-body);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', serif;
+    /* A bit more academic/formal for headers */
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+    transition: color var(--transition-speed);
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+/* Layout */
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: var(--sidebar-width);
+    background: var(--bg-white);
+    border-right: 1px solid var(--border-color);
+    padding: var(--spacing-md);
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.02);
+}
+
+.profile-image-container {
+    width: 140px;
+    /* Slightly larger for image */
+    height: 140px;
+    border-radius: 50%;
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 3px solid var(--bg-body);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* This crops the image to fit perfectly */
+    object-position: center top;
+    /* Focus on face usually */
+}
+
+/* Fallback if no image */
+.profile-placeholder {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    background: #eee;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.name {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: var(--spacing-sm);
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-bottom: var(--spacing-md);
+}
+
+.social-links a {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* Navigation */
+.main-nav ul {
+    list-style: none;
+    width: 100%;
+}
+
+.nav-item {
+    padding: 12px 20px;
+    cursor: pointer;
+    /* Ensure it looks clickable */
+    border-radius: 8px;
+    transition: all var(--transition-speed);
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.nav-item:hover {
+    background-color: rgba(52, 152, 219, 0.1);
+    color: var(--accent-color);
+}
+
+.nav-item.active {
+    background-color: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(44, 62, 80, 0.2);
+}
+
+/* Content Area */
+.content-area {
+    margin-left: var(--sidebar-width);
+    flex-grow: 1;
+    padding: var(--spacing-lg);
+    background-color: var(--bg-body);
+    min-height: 100vh;
+}
+
+/* Section Styling */
+.section-title {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.card {
+    background: var(--bg-white);
+    border-radius: 12px;
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: transform var(--transition-speed);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.item-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.item-subtitle {
+    font-size: 1rem;
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+.item-date {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.item-description {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    margin-top: 0.5rem;
+}
+
+/* Publication Styling */
+.publication-item {
+    padding-left: 1rem;
+    border-left: 3px solid var(--accent-color);
+}
+
+.pub-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.pub-authors {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin: 4px 0;
+}
+
+.pub-meta {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--primary-color);
+}
+
+.skill-tag {
+    background: #eef2f7;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin: 5px;
+    display: inline-block;
+    color: var(--primary-color);
+    font-size: 0.95rem;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+}
+
+.skill-tag:hover {
+    border-color: var(--accent-color);
+    background: #fff;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: var(--spacing-sm);
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .content-area {
+        margin-left: 0;
+        padding: var(--spacing-sm);
+    }
+
+    .main-nav ul {
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 10px;
+        gap: 10px;
+    }
+
+    .nav-item {
+        white-space: nowrap;
+    }
+}
+
+/* Animation */
+.fade-in {
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

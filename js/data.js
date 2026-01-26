@@ -78,11 +78,11 @@ const data = {
             url: "https://arxiv.org/pdf/2411.16956"
         },
         {
-            title: "Navigating fairness aspects of clinical prediction models examples from chronic metabolic diseases",
+            title: "Navigating fairness aspects of clinical prediction models",
             authors: "Chakradeo, Kaustubh, et al.",
-            venue: "Accepted pending publication: BMC Medicine",
+            venue: "BMC Medicine",
             year: "2025",
-            url: ""
+            url: "https://link.springer.com/article/10.1186/s12916-025-04340-3"
         },
         {
             title: "Climate Change and Malaria: A Call for Robust Analytics",

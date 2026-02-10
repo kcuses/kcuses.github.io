@@ -11,7 +11,7 @@ const data = {
         email: "chakradeo@dcm.aau.dk",
         address: "Copenhagen, Denmark",
         linkedin: "https://www.linkedin.com/in/kaustubhchakradeo/",
-        github: "https://github.com/kaustubhchakradeo",
+        github: "https://github.com/kcuses",
         scholar: "https://scholar.google.co.in/citations?user=w7q2xosAAAAJ&hl=da&oi=ao",
         orcid: "https://orcid.org/0000-0003-0946-0524"
     },

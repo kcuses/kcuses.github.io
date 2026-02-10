@@ -81,10 +81,10 @@ function renderAbout() {
         <h3 style="margin-top: 2rem;">Contact</h3>
         <div class="card">
             <p><i class="fas fa-envelope"></i> <a href="mailto:${data.contact.email}">${data.contact.email}</a></p>
-            <p><i class="fas fa-phone"></i> ${data.contact.phone}</p>
             <p><i class="fas fa-map-marker-alt"></i> ${data.contact.address}</p>
             <p style="margin-top:10px;">
                 <a href="${data.contact.linkedin}" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> &nbsp;|&nbsp;
+                <a href="${data.contact.scholar}" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a> &nbsp;|&nbsp;
                 <a href="${data.contact.github}" target="_blank"><i class="fab fa-github"></i> GitHub</a> &nbsp;|&nbsp;
                 <a href="${data.contact.orcid}" target="_blank"><i class="fab fa-orcid"></i> ORCID</a>
             </p>

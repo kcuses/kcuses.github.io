@@ -7,8 +7,7 @@ const data = {
         initials: "KC",
         location: "Copenhagen, Denmark"
     },
-    contact: {
-        email: "kcuses12@gmail.com", 
+    contact: { 
         email: "chakradeo@dcm.aau.dk",
         address: "Copenhagen, Denmark",
         linkedin: "https://www.linkedin.com/in/kaustubhchakradeo/",
